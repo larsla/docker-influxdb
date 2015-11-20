@@ -1,0 +1,7 @@
+FROM armbuild/ubuntu
+
+ADD output/influxd /influxd
+ADD files/influxdb.conf /etc/influxdb.conf
+ADD files/run.sh /run.sh
+
+CMD /run.sh
