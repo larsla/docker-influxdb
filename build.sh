@@ -7,6 +7,6 @@ ARCH=${1:-x86_64}
 docker build -t influxdb-build -f Dockerfile-${ARCH}.build .
 
 [ -d output ] || mkdir output
-docker run -v $PWD/output:/output influxdb-build
+docker run -v $PWD/output:/output influxdb-build /output
 
 docker build -t larsla/influxdb-${ARCH} -f Dockerfile-${ARCH} .
