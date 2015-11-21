@@ -7,8 +7,6 @@ if [ ! $1 ]; then
 	exit 1
 fi
 
-ls -hal $0
-
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 mkdir -p $GOBIN

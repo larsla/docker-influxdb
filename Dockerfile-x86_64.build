@@ -19,4 +19,4 @@ VOLUME /output
 
 ADD files/build.sh /build.sh
 
-CMD /build.sh
+ENTRYPOINT /build.sh
