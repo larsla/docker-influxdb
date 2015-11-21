@@ -2,7 +2,7 @@
 
 set -e
 
-if [ ! $1 ]; then
+if [ -z "$1" ]; then
 	echo "Usage: $0 <output dir>"
 	exit 1
 fi
