@@ -13,8 +13,8 @@ mkdir -p $GOBIN
 
 export PATH=$PATH:$GOBIN
 
-go get github.com/influxdb/influxdb
-cd $GOPATH/src/github.com/influxdb/
+go get github.com/influxdata/influxdb
+cd $GOPATH/src/github.com/influxdata/
 go get ./...
 go install ./...
 
