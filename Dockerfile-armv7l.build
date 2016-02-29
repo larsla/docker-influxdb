@@ -5,7 +5,7 @@ ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
 VOLUME /output
 
-RUN apk add --no-cache bash
+RUN apk add --no-cache bash git wget gzip
 
 ADD files/build.sh /build.sh
 
