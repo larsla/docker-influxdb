@@ -7,11 +7,10 @@ if [ -z "$1" ]; then
 	exit 1
 fi
 
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-mkdir -p $GOBIN
+export GOPATH=/go
+export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH
 
-export PATH=$PATH:$GOBIN
+mkdir -p $GOPATH/bin
 
 go get github.com/influxdata/influxdb
 cd $GOPATH/src/github.com/influxdata/

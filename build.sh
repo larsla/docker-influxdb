@@ -2,7 +2,7 @@
 
 set -e
 
-ARCH=${1:-x86_64}
+ARCH=${1:-armv7l}
 
 docker build -t influxdb-build -f Dockerfile-${ARCH}.build .
 

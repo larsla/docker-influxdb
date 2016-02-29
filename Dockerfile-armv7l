@@ -1,4 +1,4 @@
-FROM armbuild/ubuntu
+FROM armbuild/alpine:3.3
 
 ADD output/influxd /influxd
 ADD files/influxdb.conf /etc/influxdb.conf

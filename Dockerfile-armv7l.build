@@ -1,19 +1,7 @@
-FROM armbuild/ubuntu
+FROM larsla/go-armv7l
 
-RUN apt-get update && apt-get install -y build-essential git wget gzip && apt-get clean
-
-
-ENV GOPATH=/root/go
-ENV GOBIN=/root/go/bin
-
-RUN \
-	mkdir -p $GOBIN; \
-	cd /tmp; \
-	wget -q https://storage.googleapis.com/golang/go1.4.2.src.tar.gz; \
-	tar -xf go1.4.2.src.tar.gz; \
-	cd go/src; \
-	./all.bash; \
-	hash -r
+ENV GOPATH /go
+ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
 VOLUME /output
 
