@@ -5,6 +5,8 @@ ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
 VOLUME /output
 
+RUN apk add --no-cache bash
+
 ADD files/build.sh /build.sh
 
 ENTRYPOINT ["/build.sh"]
